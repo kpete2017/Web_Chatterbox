@@ -1,0 +1,25 @@
+.nav {
+    height: 5vh;
+    width: 100vw;
+    background-color: #212121;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sign-out {
+    background-color: #212121;
+    position: fixed;
+    right: 1vw;
+    top: .1vh;
+    border: 1px solid #cccccc;
+    color: white;
+    padding: 1vh 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  
