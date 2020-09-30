@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
 import './SignIn.css'
 
 
-export default class SignIn extends React.Component {
+export default class SignIn extends Component {
 
   state = {
     email: "",
@@ -16,18 +16,11 @@ export default class SignIn extends React.Component {
     }
 
     signInWithEmail = () => {
-      this.props.firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-      });
+      this.props.firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password);
     }
 
     signUpWithEmail = () => {
-      console.log(this.state.email, this.state.password)
-      this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-      });
+      this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
     }
 
     render() {

@@ -29,7 +29,8 @@ export default function ChatRoom(props) {
       dummy.current.scrollIntoView({ behavior: 'smooth' });
     }
   
-    return (<>
+    return (
+    <div className="chat-room">
       <main>
   
         {messages && messages.map(msg => <ChatMessage auth={props.auth} key={msg.id} message={msg} />)}
@@ -40,10 +41,11 @@ export default function ChatRoom(props) {
   
       <form onSubmit={sendMessage}>
   
-        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+        <textarea maxlength="256" value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
   
-        <button type="submit" disabled={!formValue}>🕊️</button>
+        <button type="submit" disabled={!formValue}>Send</button>
   
       </form>
-    </>)
+    </div>
+    )
   }

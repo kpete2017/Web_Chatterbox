@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.css';
-
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/analytics';
-
 import { useAuthState } from 'react-firebase-hooks/auth';
-
 import Header from './Components/Header'
 import SignIn from './Components/SignIn'
-import ChatRoom from './Components/ChatRoom'
+import Home from './Components/Home'
 
 firebase.initializeApp({
   apiKey: "AIzaSyAl67Mo1BUxRnKzqvvltwCb4HjBcprm-L8",
@@ -36,7 +32,7 @@ function App() {
       <Header auth={auth}/>
 
       <section>
-        {user ? <ChatRoom firestore={firestore} auth={auth} firebase={firebase} /> : <SignIn auth={auth} firebase={firebase}/>}
+        {user ? <Home auth={auth} firebase={firebase} firestore={firestore}/> : <SignIn auth={auth} firebase={firebase}/>}
       </section>
 
     </div>
