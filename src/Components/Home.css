@@ -7,19 +7,35 @@
     left: 0;
 }
 
+.chat-room h2 {
+    color: white;
+}
+
 .chat-room {
-    margin: 0 auto;
-    margin-top: 6.7vh;
+    width: 40vw;
+    margin-top: 5vh;
+}
+
+.chat-selection-area {
+    margin-top: 5vh;
+    width: 30vw;
+    height: 94.5vh;
+}
+
+.todo {
+    margin-top: 5vh;
+    width: 30vw;
+    height: 94.5vh;
 }
 
 main {
-    width: 40vw;
     padding: 10px;
-    height: 80vh;
-    margin: 0vh 0 1vh;
+    height: 75vh;
+    margin: .8vh 0 0vh;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    background-color: #212121;
 }
   
 main::-webkit-scrollbar {

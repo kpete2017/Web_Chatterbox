@@ -6,7 +6,7 @@ import ChatMessage from './ChatMessage'
 export default function ChatRoom(props) {
     const dummy = useRef();
     const messagesRef = props.firestore.collection('messages');
-    const query = messagesRef.orderBy('createdAt').limit(25);
+    const query = messagesRef.orderBy('createdAt').limit(100);
   
     const [messages] = useCollectionData(query, { idField: 'id' });
   
@@ -31,6 +31,7 @@ export default function ChatRoom(props) {
   
     return (
     <div className="chat-room">
+      <h2>General Chat</h2>
       <main>
   
         {messages && messages.map(msg => <ChatMessage auth={props.auth} key={msg.id} message={msg} />)}
@@ -41,7 +42,7 @@ export default function ChatRoom(props) {
   
       <form onSubmit={sendMessage}>
   
-        <textarea maxlength="256" value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+        <textarea maxLength="256" value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
   
         <button type="submit" disabled={!formValue}>Send</button>
   

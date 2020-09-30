@@ -16,11 +16,11 @@ export default class SignIn extends Component {
     }
 
     signInWithEmail = () => {
-      this.props.firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password);
+      this.props.firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch(() => alert("Invalid Email or Password"))
     }
 
     signUpWithEmail = () => {
-      this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
+      this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch(() => alert("Invalid Email or Password Or Existing Account"))
     }
 
     render() {

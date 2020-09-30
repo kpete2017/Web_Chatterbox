@@ -16,3 +16,12 @@ body {
   height: 95vh;
   background-color: #101010;
 }
+
+#chatterbot {
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  color: white;
+  top: -1.3vh;
+  left: 2vw;
+}
