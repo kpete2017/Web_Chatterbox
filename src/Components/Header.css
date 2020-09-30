@@ -1,7 +1,7 @@
 .nav {
     height: 5vh;
     width: 100vw;
-    background-color: #212121;
+    background-color: #151515;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,11 +9,11 @@
 }
 
 .sign-out {
-    background-color: #212121;
+    background-color: #151515;
     position: fixed;
     right: 1vw;
     top: .1vh;
-    border: 1px solid #cccccc;
+    border: 1px solid grey;
     color: white;
     padding: 1vh 32px;
     text-align: center;

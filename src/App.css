@@ -25,3 +25,7 @@ body {
   top: -1.3vh;
   left: 2vw;
 }
+
+textarea {
+  resize: none;
+}

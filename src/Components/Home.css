@@ -9,6 +9,9 @@
 
 .chat-room h2 {
     color: white;
+    background-color: #1548E5;
+    margin: 0;
+    height: 7vh;
 }
 
 .chat-room {
@@ -30,8 +33,8 @@
 
 main {
     padding: 10px;
-    height: 75vh;
-    margin: .8vh 0 0vh;
+    height: 75.8vh;
+    margin: 0vh 0 0vh;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
